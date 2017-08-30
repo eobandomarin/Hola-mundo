@@ -1,4 +1,4 @@
-##Uso de GDB
+## Uso de GDB
 
 gdb <archivo.ejecutable>
 
