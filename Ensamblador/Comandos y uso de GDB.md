@@ -7,7 +7,10 @@ mov regname,valor
 Se crea una seccion de datos y se establecen los mismos:
 
 .section data
+##### Variable vacia
+db nombrevariable
 
+##### Strings
 Nombre_variable: <ver.tipo>
 ###### String: db 'texto',0xa
 ###### Longitud de string: equ $-variablestring
@@ -27,10 +30,16 @@ _etiqueta1:
 Dar valor a registros y hacer llamadas al sistema
 
 #### Escritura en pantalla:
-rax=1
+rax=1 ;syswrite
 rdi=1
 rsi=string
 rdx=stringlength
+
+#### Input Teclado
+rax=0 ;sysread
+rdi=0 ;standard input= teclado
+rsi=variable
+rdx=cantidad_teclas
 
 #### Ejecutar instrucciones
 syscall
