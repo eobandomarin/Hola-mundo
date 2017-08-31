@@ -48,6 +48,13 @@ syscall
 rax=60
 rdi=0
 
+## Ensamblar con NASM
+1. Preparar archivo .asm
+2. nasm -f elf64 -o salida.o archivo.asm
+3. ld -o ejecutable salida.o
+
+
+
 
 
 
